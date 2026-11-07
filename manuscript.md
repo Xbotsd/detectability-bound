@@ -1,4 +1,4 @@
-﻿# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
+# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
 
 **Abstract**
 
@@ -246,6 +246,20 @@ The same material was available in three reconstructions. If κ belongs to the m
 | G2 | 120 | 66.0 | 1.03 | 26.7 | 25.6 | 59.2 |
 
 The voxel noise differs by a factor of two and the PSF by 40% across the three, yet κ agrees to within 30% at each size. That is consistent with κ being dominated by the material — the melt-track microstructure of laser powder-bed AlSi10Mg — rather than by the acquisition. The sample is a single alloy from a single study, so this is a within-material check and not a transfer claim; but it does mean κ is not an arbitrary fudge factor per scan.
+
+### 5.6 Comparison of detectors on real data
+
+The same injected flaw was presented to three detectors at a = 4 voxels and ΔI/σ = 8, with each threshold set to the same empirical false-alarm rate.
+
+| detector | null s.d. | threshold | POD at α = 0.01 |
+|---|---|---|---|
+| matched filter, position known | 10 470 | 28 276 | 0.530 |
+| matched filter, position searched | 27 028 | 66 900 | 0.117 |
+| peak amplitude, template-free | 2 024 | 5 300 | 0.023 |
+
+All three achieve the nominal false-alarm rate — the annihilation check returns 0.010 for each, which is the calibration working — and the ordering reproduces the synthetic result: knowing the position is worth a factor of four, and discarding the template costs another factor of five. The white-noise bound at this setting is 1.000, so every detector sits far below it, as κ predicts.
+
+One caveat belongs here rather than in a footnote. The null distribution of the matched-filter statistic on real metal is heavy-tailed, not Gaussian (the s.d. of 10 470 is dominated by a few structural patches), so a POD computed from a percentile threshold and a d′ computed from a standard deviation do not tell exactly the same story. The bound's *form* assumes a Gaussian null; the measurement in Table 6 shows how far that assumption is stretched. κ should therefore be read as a variance-inflation measure with a stated sampling spread, not as a three-digit constant.
 
 ---
 
