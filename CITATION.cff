@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "dbound: a closed-form detectability bound for volumetric flaw inspection"
+type: software
+authors:
+  - family-names: Xu
+    given-names: Yudong
+version: 0.1.0
+date-released: 2026-11-08
+license: MIT
+abstract: >-
+  An upper bound on the probability of detection of a volumetric flaw, derived
+  from the Neyman-Pearson lemma and the Cauchy-Schwarz inequality, with the
+  cubic and three-halves-power asymptotes in the ratio of flaw size to voxel
+  size, an inverse design rule, and a measured correction for clutter inflation
+  on real X-ray computed tomography data.
+references:
+  - type: dataset
+    title: >-
+      Tomographic image stacks for the study "Analysis of Porosity in AlSi10Mg
+      Using Tomographic Image Processing"
+    doi: 10.5281/zenodo.17602110
+    license: CC-BY-4.0

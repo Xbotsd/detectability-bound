@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# raw third-party imaging is not committed; see data/README.md
+data/vol_gd/
+data/vol_g1/
+data/vol_g2/
+data/raw/
+data/parts/
+*.dcm
+*.zip
+_span.bin
+
+# build artefacts
+build/
+dist/
