@@ -1,11 +1,11 @@
-"""dbound — detectability bound for volumetric flaw inspection.
+﻿"""dbound — detectability bound for volumetric flaw inspection.
 
 Public API
 ----------
 psf        point spread function, sphere rendering, blur
 bound      E(x), d', POD bound, inverse design rule
 detectors  matched-filter templates and reference detectors
-realdata   DICOM loading, noise / PSF / clutter estimation, manif。
+realdata   DICOM loading, noise / PSF / clutter estimation, manifests.
 
 The package separates two things that are easy to confuse:
 
@@ -23,3 +23,4 @@ __version__ = "0.1.0"
 from . import bound, detectors, psf, realdata  # noqa: F401
 
 __all__ = ["bound", "detectors", "psf", "realdata", "__version__"]
+
