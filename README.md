@@ -1,4 +1,4 @@
-# detectability-bound
+﻿# detectability-bound
 
 **How big does a flaw have to be before an inspection can see it — and how much of what you measure is the flaw versus the measurement?**
 
@@ -32,6 +32,7 @@ Sixty seconds:
 ```bash
 pip install -e .
 python -m dbound verify                      # check the algebra (~4 min)
+python tools/make_figures.py                 # rebuild the four figures from results/
 python -m dbound bound --a 100 --L 40 --dI-over-sigma 5   # one number, no data
 ```
 
@@ -128,3 +129,4 @@ See `CITATION.cff`. If you use the imaging data, cite the Zenodo record.
 ## Licence
 
 MIT. The data keep their own licence (CC BY 4.0).
+

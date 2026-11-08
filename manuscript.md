@@ -1,4 +1,4 @@
-﻿# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
+# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
 
 **Abstract**
 
@@ -73,8 +73,14 @@ where S = Σ_i G_i² is the sum of squared samples of the unit-FWHM Gaussian on 
     E(x) = (π/6) x³ · (1 + O(1/x)) ,    hence    d' ∝ x^{3/2}
 
 *Proof.* For x ≫ 1 the blurred image equals ΔI in the interior of the flaw and departs from it only within a boundary layer of thickness of order the PSF width, so ‖s‖² = ΔI²(V − cA + O(x)) with V = (π/6)x³ the flaw volume and A = πx² its surface area. The leading term gives the stated form. ∎
+![**Figure 1.** Deflection factor √E(a/L) against the size ratio x = a/L. The dashed and dotted guides mark the two asymptotes: the cubic law holds to within a few per cent up to x ≈ 0.5, and the three-halves law is approached from above as the surface term of Proposition 2 becomes negligible.](figures/fig1_energy.png)
+
+Figure 1 plots the factor that carries the whole geometry. Everything else in the bound is a constant.
 
 The two exponents are the paper's central quantitative statement, and they say different things about where money should go. Below the voxel size the deflection is a *volume* effect: the flaw's mass is distributed over a fixed PSF, so halving the flaw divides the deflection by eight. Above it, the deflection grows as the square root of the volume, which is the ordinary behaviour of an energy signal against white noise.
+![**Figure 2.** POD bound at α = 0.01 for four contrast-to-noise ratios. A flaw at ΔI/σ = 1 has to be about three PSF widths across to reach POD = 0.9; at ΔI/σ = 10, half a PSF width is enough.](figures/fig2_pod.png)
+
+Figure 2 turns the same curve into the quantity a qualification engineer actually reads. The horizontal line is the usual 90% requirement; where each curve crosses it is the design rule of Section 4.
 
 ### 2.4 Remarks on the assumptions
 
@@ -199,6 +205,9 @@ Write κ for the ratio of the standard deviation of the matched-filter statistic
 | 16.0 | 11.17 | 125.2 | [115.9, 132.7] |
 
 Two regimes are visible. Below x ≈ 2 the inflation is flat at κ ≈ 25, so the cubic law survives but with its amplitude divided by twenty-five: a flaw below the voxel size is twenty-five times harder to see than the white-noise bound promises, and the exponent is unchanged. Above x ≈ 4 the inflation grows, with a local exponent of 1.21 between x = 4 and x = 11.
+![**Figure 3.** Measured clutter inflation κ against x on the public XCT stack: GD is the primary volume (212 slices, error bars are 95% bootstrap intervals over patches), G1 and G2 are two other reconstructions of the same material. κ is flat below the voxel size and rises as x^1.23 above it, which is what removes the three-halves gain.](figures/fig3_kappa.png)
+
+Figure 3 is the empirical half of the paper. The flat part is why the cubic law survives on real data; the rising part is why the three-halves law does not.
 
 ### 5.3 What the inflation does to the design rule
 
@@ -257,7 +266,11 @@ The same injected flaw was presented to three detectors at a = 4 voxels and ΔI/
 | matched filter, position searched | 27 028 | 66 900 | 0.117 |
 | peak amplitude, template-free | 2 024 | 5 300 | 0.023 |
 
-All three achieve the nominal false-alarm rate — the annihilation check returns 0.010 for each, which is the calibration working — and the ordering reproduces the synthetic result: knowing the position is worth a factor of four, and discarding the template costs another factor of five. The white-noise bound at this setting is 1.000, so every detector sits far below it, as κ predicts.
+All three achieve the nominal false-alarm rate — the annihilation check returns 0.010 for each, which is the calibration working — and the ordering reproduces the synthetic result: knowing the position is worth a factor of four, and discarding the template costs another factor of five.
+
+![**Figure 4.** (a) POD at matched false alarm for three detectors on real metal; the dashed line is the white-noise bound, which none reaches. (b) κ for three template constructions, at a = 8 voxels. (c) Three noise estimates of the same data; the robust second-difference estimator used here is the smallest, the plain standard deviation nine times larger.](figures/fig4_detectors_ablation.png)
+
+The white-noise bound at this setting is 1.000, so every detector sits far below it, as κ predicts.
 
 One caveat belongs here rather than in a footnote. The null distribution of the matched-filter statistic on real metal is heavy-tailed, not Gaussian (the s.d. of 10 470 is dominated by a few structural patches), so a POD computed from a percentile threshold and a d′ computed from a standard deviation do not tell exactly the same story. The bound's *form* assumes a Gaussian null; the measurement in Table 7 shows how far that assumption is stretched. κ should therefore be read as a variance-inflation measure with a stated sampling spread, not as a three-digit constant.
 
@@ -316,6 +329,8 @@ A closed-form upper bound on the probability of detection of a volumetric flaw h
 [11] J. Neyman, E. S. Pearson, "On the problem of the most efficient tests of statistical hypotheses," *Philosophical Transactions of the Royal Society A*, 231: 289–337, 1933. doi:10.1098/rsta.1933.0009
 
 [12] Tomographic image stacks for the study "Analysis of Porosity in AlSi10Mg Using Tomographic Image Processing", Zenodo, doi:10.5281/zenodo.17602110, CC BY 4.0.
+
+
 
 
 
