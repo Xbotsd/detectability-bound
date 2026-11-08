@@ -1,4 +1,4 @@
-# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
+﻿# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
 
 **Abstract**
 
@@ -245,7 +245,7 @@ The same material was available in three reconstructions. If κ belongs to the m
 | G1 | 120 | 48.2 | 1.05 | 28.8 | 32.4 | 59.4 |
 | G2 | 120 | 66.0 | 1.03 | 26.7 | 25.6 | 59.2 |
 
-The voxel noise differs by a factor of two and the PSF by 40% across the three, yet κ agrees to within 30% at each size. That is consistent with κ being dominated by the material — the melt-track microstructure of laser powder-bed AlSi10Mg — rather than by the acquisition. The sample is a single alloy from a single study, so this is a within-material check and not a transfer claim; but it does mean κ is not an arbitrary fudge factor per scan.
+The voxel noise differs by a factor of two and the PSF by 40% across the three, yet κ agrees to within 30% at each size. The cross-group protocol fixes the sampled interior across sizes so that the three groups are compared on the same region; that is why κ at a = 2 here (22.1) differs slightly from the value in Section 5.2 (24.4), where the interior is eroded per size. The difference, about 10%, is the same sampling spread that the padding row of the ablation reports. That is consistent with κ being dominated by the material — the melt-track microstructure of laser powder-bed AlSi10Mg — rather than by the acquisition. The sample is a single alloy from a single study, so this is a within-material check and not a transfer claim; but it does mean κ is not an arbitrary fudge factor per scan.
 
 ### 5.6 Comparison of detectors on real data
 
@@ -259,7 +259,7 @@ The same injected flaw was presented to three detectors at a = 4 voxels and ΔI/
 
 All three achieve the nominal false-alarm rate — the annihilation check returns 0.010 for each, which is the calibration working — and the ordering reproduces the synthetic result: knowing the position is worth a factor of four, and discarding the template costs another factor of five. The white-noise bound at this setting is 1.000, so every detector sits far below it, as κ predicts.
 
-One caveat belongs here rather than in a footnote. The null distribution of the matched-filter statistic on real metal is heavy-tailed, not Gaussian (the s.d. of 10 470 is dominated by a few structural patches), so a POD computed from a percentile threshold and a d′ computed from a standard deviation do not tell exactly the same story. The bound's *form* assumes a Gaussian null; the measurement in Table 6 shows how far that assumption is stretched. κ should therefore be read as a variance-inflation measure with a stated sampling spread, not as a three-digit constant.
+One caveat belongs here rather than in a footnote. The null distribution of the matched-filter statistic on real metal is heavy-tailed, not Gaussian (the s.d. of 10 470 is dominated by a few structural patches), so a POD computed from a percentile threshold and a d′ computed from a standard deviation do not tell exactly the same story. The bound's *form* assumes a Gaussian null; the measurement in Table 7 shows how far that assumption is stretched. κ should therefore be read as a variance-inflation measure with a stated sampling spread, not as a three-digit constant.
 
 ---
 
@@ -295,7 +295,7 @@ A closed-form upper bound on the probability of detection of a volumetric flaw h
 
 [1] S. M. Kay, *Fundamentals of Statistical Signal Processing, Vol. II: Detection Theory*, Prentice Hall, 1998.
 
-[2] G. L. Turin, "An introduction to matched filters," *IRE Transactions on Information Theory*, 6(3): 311–329, 1960.
+[2] G. L. Turin, "An introduction to matched filters," *IRE Transactions on Information Theory*, 6(3): 311–329, 1960. doi:10.1109/TIT.1960.1057571
 
 [3] T. M. Cover, J. A. Thomas, *Elements of Information Theory*, 2nd ed., Wiley, 2006.
 
@@ -303,19 +303,22 @@ A closed-form upper bound on the probability of detection of a volumetric flaw h
 
 [5] A. Rose, *Vision: Human and Electronic*, Plenum Press, 1973.
 
-[6] L. De Chiffre, S. Carmignato, J.-P. Kruth, R. Schmitt, A. Weckenmann, "Industrial applications of computed tomography," *CIRP Annals*, 63(2): 655–677, 2014.
+[6] L. De Chiffre, S. Carmignato, J.-P. Kruth, R. Schmitt, A. Weckenmann, "Industrial applications of computed tomography," *CIRP Annals*, 63(2): 655–677, 2014. doi:10.1016/j.cirp.2014.05.011
 
 [7] S. Carmignato, W. Dewulf, R. Leach (eds.), *Industrial X-Ray Computed Tomography*, Springer, 2018.
 
-[8] A. du Plessis, I. Yadroitsev, I. Yadroitsava, S. G. Le Roux, "X-ray microcomputed tomography in additive manufacturing: a review of the current technology and applications," *3D Printing and Additive Manufacturing*, 5(3): 227–247, 2018.
+[8] A. du Plessis, I. Yadroitsev, I. Yadroitsava, S. G. Le Roux, "X-ray microcomputed tomography in additive manufacturing: a review of the current technology and applications," *3D Printing and Additive Manufacturing*, 5(3): 227–247, 2018. doi:10.1089/3dp.2018.0060
 
 [9] NIST, *Additive Manufacturing Benchmark Test Series (AM-Bench)*, https://www.nist.gov/ambench
 
 [10] ASTM F42, *Additive Manufacturing Technologies* (standards family).
 
-[11] J. Neyman, E. S. Pearson, "On the problem of the most efficient tests of statistical hypotheses," *Philosophical Transactions of the Royal Society A*, 231: 289–337, 1933.
+[11] J. Neyman, E. S. Pearson, "On the problem of the most efficient tests of statistical hypotheses," *Philosophical Transactions of the Royal Society A*, 231: 289–337, 1933. doi:10.1098/rsta.1933.0009
 
 [12] Tomographic image stacks for the study "Analysis of Porosity in AlSi10Mg Using Tomographic Image Processing", Zenodo, doi:10.5281/zenodo.17602110, CC BY 4.0.
+
+
+
 
 
 

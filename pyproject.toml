@@ -1,4 +1,4 @@
-[build-system]
+﻿[build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
@@ -12,8 +12,15 @@ license = { text = "MIT" }
 authors = [{ name = "Yudong Xu" }]
 dependencies = ["numpy>=1.24", "scipy>=1.10", "pydicom>=2.4"]
 
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 [project.scripts]
 dbound = "dbound.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
