@@ -1,4 +1,4 @@
-# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
+﻿# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
 
 **Abstract**
 
@@ -223,7 +223,7 @@ The uncorrected bound is not violated anywhere: κ ≥ 1 always, so POD_measured
 
 Four choices were varied one at a time at a = 8 voxels, and κ recomputed each time.
 
-| factor | setting | κ |
+| factor | setting | value |
 |---|---|---|
 | template | raw sphere (no mean removal) | 115.1 |
 | | zero-mean over the patch | 105.9 |
@@ -262,9 +262,9 @@ The same injected flaw was presented to three detectors at a = 4 voxels and ΔI/
 
 | detector | null s.d. | threshold | POD at α = 0.01 |
 |---|---|---|---|
-| matched filter, position known | 10 470 | 28 276 | 0.530 |
-| matched filter, position searched | 27 028 | 66 900 | 0.117 |
-| peak amplitude, template-free | 2 024 | 5 300 | 0.023 |
+| matched filter, position known | 10 470 | 8 434 | 0.530 |
+| matched filter, position searched | 27 028 | 56 106 | 0.117 |
+| peak amplitude, template-free | 2 024 | 9 300 | 0.023 |
 
 All three achieve the nominal false-alarm rate — the annihilation check returns 0.010 for each, which is the calibration working — and the ordering reproduces the synthetic result: knowing the position is worth a factor of four, and discarding the template costs another factor of five.
 
@@ -329,6 +329,7 @@ A closed-form upper bound on the probability of detection of a volumetric flaw h
 [11] J. Neyman, E. S. Pearson, "On the problem of the most efficient tests of statistical hypotheses," *Philosophical Transactions of the Royal Society A*, 231: 289–337, 1933. doi:10.1098/rsta.1933.0009
 
 [12] Tomographic image stacks for the study "Analysis of Porosity in AlSi10Mg Using Tomographic Image Processing", Zenodo, doi:10.5281/zenodo.17602110, CC BY 4.0.
+
 
 
 
