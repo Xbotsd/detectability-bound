@@ -18,6 +18,25 @@ Neyman–Pearson lemma and the Cauchy–Schwarz inequality: the matched filter
 maximises the deflection, so no detector — including any trained one — can exceed
 it.
 
+## Start here
+
+| if you want to… | read |
+|---|---|
+| understand what the bound means and where it comes from | [`docs/使用说明.md`](docs/使用说明.md) (中文) |
+| use it, command by command, with tutorials | [`docs/GUIDE.md`](docs/GUIDE.md) |
+| see what is measured, derived or synthetic | [`docs/PROVENANCE.md`](docs/PROVENANCE.md) |
+| check the data behind every number | [`data/README.md`](data/README.md) |
+
+Sixty seconds:
+
+```bash
+pip install -e .
+python -m dbound verify                      # check the algebra (~4 min)
+python -m dbound bound --a 100 --L 40 --dI-over-sigma 5   # one number, no data
+```
+
+`python -m dbound --help` lists every command; `docs/GUIDE.md` explains each one.
+
 ## The two asymptotes
 
 | regime | deflection | meaning |
