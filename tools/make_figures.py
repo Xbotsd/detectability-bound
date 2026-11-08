@@ -1,4 +1,4 @@
-﻿"""Generate the paper figures from the result files.
+"""Generate the paper figures from the result files.
 
 Every number is read from ``results/*.json`` or computed from the package; nothing
 is transcribed by hand.  Output: vector PDF plus a 300 dpi PNG preview per figure.

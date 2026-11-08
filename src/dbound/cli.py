@@ -1,4 +1,4 @@
-﻿"""Command line entry point: ``python -m dbound <command>``."""
+"""Command line entry point: ``python -m dbound <command>``."""
 
 from __future__ import annotations
 

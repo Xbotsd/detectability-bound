@@ -1,4 +1,4 @@
-﻿"""Minimal Markdown -> DOCX builder for project documents.
+"""Minimal Markdown -> DOCX builder for project documents.
 
 Usage:  python scripts/build_docx.py <input.md> [output.docx]
 

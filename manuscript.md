@@ -1,4 +1,4 @@
-﻿# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
+# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
 
 **Abstract**
 

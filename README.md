@@ -1,4 +1,4 @@
-﻿# detectability-bound
+# detectability-bound
 
 **How big does a flaw have to be before an inspection can see it — and how much of what you measure is the flaw versus the measurement?**
 
