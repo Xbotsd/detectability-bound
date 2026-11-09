@@ -1,15 +1,15 @@
-[build-system]
+﻿[build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "dbound"
 version = "0.1.0"
-description = "A closed-form detectability bound for volumetric flaw inspection"
+description = "A closed-form detectability bound for volumetric flaw inspection (for NDT&E International)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Yudong Xu" }]
+authors = [{ name = "Yudong Xu", email = "3468858545@qq.com" }]
 dependencies = ["numpy>=1.24", "scipy>=1.10", "pydicom>=2.4"]
 
 [project.optional-dependencies]
@@ -23,4 +23,5 @@ dbound = "dbound.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
 

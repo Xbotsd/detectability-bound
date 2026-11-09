@@ -5,8 +5,11 @@ type: software
 authors:
   - family-names: Xu
     given-names: Yudong
+    affiliation: "School of Mechanical Engineering, Heilongjiang University of Science and Technology, Harbin 150022, China"
+    orcid: "https://orcid.org/0009-0002-3231-0444"
+    email: 3468858545@qq.com
 version: 0.1.0
-date-released: 2026-11-08
+date-released: 2026-11-09
 license: MIT
 abstract: >-
   An upper bound on the probability of detection of a volumetric flaw, derived

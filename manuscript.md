@@ -1,4 +1,12 @@
-# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
+﻿# A closed-form detectability bound for volumetric flaw inspection: the cubic penalty below the voxel size
+
+**Yudong Xu** (first and corresponding author)
+
+School of Mechanical Engineering, Heilongjiang University of Science and Technology, Harbin 150022, China
+
+Email: 3468858545@qq.com · ORCID: 0009-0002-3231-0444
+
+*Prepared for NDT&E International. Further authors to be added.*
 
 **Abstract**
 
@@ -329,6 +337,8 @@ A closed-form upper bound on the probability of detection of a volumetric flaw h
 [11] J. Neyman, E. S. Pearson, "On the problem of the most efficient tests of statistical hypotheses," *Philosophical Transactions of the Royal Society A*, 231: 289–337, 1933. doi:10.1098/rsta.1933.0009
 
 [12] Tomographic image stacks for the study "Analysis of Porosity in AlSi10Mg Using Tomographic Image Processing", Zenodo, doi:10.5281/zenodo.17602110, CC BY 4.0.
+
+
 
 
 

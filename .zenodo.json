@@ -1,0 +1,46 @@
+{
+  "title": "dbound: a closed-form detectability bound for volumetric flaw inspection",
+  "description": "<p>An upper bound on the probability of detection (POD) of a volumetric flaw, with the code, the result files and the manuscript that support it.</p><p>The bound follows from the Neyman-Pearson lemma and the Cauchy-Schwarz inequality: the matched filter maximises the deflection, so no detector - including any trained one - can exceed</p><p><code>d'(a) = (dI / sigma) * sqrt(E(a/L) * N)</code> and <code>POD(a) &lt;= Phi(d'(a) - z_{1-alpha})</code>,</p><p>where <code>a/L</code> is the ratio of flaw size to point-spread width and <code>E</code> is the squared norm of the blurred flaw image. The geometry enters through <code>E</code> alone, with two asymptotes: below the voxel size the deflection falls as the cube of the flaw size, above it as the three-halves power. A corollary prices resolution against repeat scanning: one halving of the voxel size is worth 64 repeat scans below the voxel size, and 8 above it.</p><p>The repository also measures what the white-noise assumption costs on real data. Using a public X-ray CT stack of laser powder-bed AlSi10Mg (212 slices, 37 um isotropic voxels), the noise a matched filter actually sees is 24 to 125 times the voxel noise, because the statistic integrates microstructure. The inflation is flat below the voxel size and rises as x^1.23 above it, so for flaws of equal contrast the effective size exponent falls from 3/2 to about 0.3.</p><p>Contents: the <code>dbound</code> Python package (bound, PSF, detectors, real-data estimators, experiments, CLI), 11 tests, the result files behind every table and figure, four publication figures, the manuscript, and the scripts that regenerate all of it. All empirical numbers come from the cited public dataset; the only synthetic content is the exact-truth check of Propositions 1-2, which is labelled as such and is never presented as data.</p>",
+  "creators": [
+    {
+      "name": "Xu, Yudong",
+      "affiliation": "School of Mechanical Engineering, Heilongjiang University of Science and Technology, Harbin 150022, China",
+      "orcid": "0009-0002-3231-0444"
+    }
+  ],
+  "keywords": [
+    "probability of detection",
+    "POD",
+    "detectability bound",
+    "matched filter",
+    "Neyman-Pearson",
+    "clutter",
+    "X-ray computed tomography",
+    "additive manufacturing",
+    "partial volume effect",
+    "inspection qualification"
+  ],
+  "license": {
+    "id": "MIT"
+  },
+  "upload_type": "software",
+  "publication_date": "2026-11-09",
+  "version": "0.1.0",
+  "language": "eng",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.17602110",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/Xbotsd/detectability-bound",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Funded by institutional resources; no external grant. The X-ray CT data used here are a third-party CC BY 4.0 deposit (doi:10.5281/zenodo.17602110) and are not redistributed in this record; per-slice SHA-256 manifests are included so the exact slice set can be re-fetched and verified."
+}
