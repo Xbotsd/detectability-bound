@@ -8,8 +8,12 @@ authors:
     affiliation: "School of Mechanical Engineering, Heilongjiang University of Science and Technology, Harbin 150022, China"
     orcid: "https://orcid.org/0009-0002-3231-0444"
     email: 3468858545@qq.com
-doi: 10.5281/zenodo.24080213
-url: "https://doi.org/10.5281/zenodo.24080213"
+doi: 10.5281/zenodo.24080212
+url: "https://doi.org/10.5281/zenodo.24080212"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24080213
+    description: "version 0.1.0 (this specific release)"
 version: 0.1.0
 date-released: 2026-11-09
 license: MIT
@@ -26,4 +30,5 @@ references:
       Using Tomographic Image Processing"
     doi: 10.5281/zenodo.17602110
     license: CC-BY-4.0
+
 

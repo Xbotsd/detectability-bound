@@ -1,6 +1,6 @@
 ﻿# detectability-bound
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24080213.svg)](https://doi.org/10.5281/zenodo.24080213)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24080212.svg)](https://doi.org/10.5281/zenodo.24080212)
 
 **How big does a flaw have to be before an inspection can see it — and how much of what you measure is the flaw versus the measurement?**
 
@@ -131,5 +131,6 @@ See `CITATION.cff`. If you use the imaging data, cite the Zenodo record.
 ## Licence
 
 MIT. The data keep their own licence (CC BY 4.0).
+
 
 
