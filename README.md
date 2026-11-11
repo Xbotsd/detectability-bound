@@ -33,7 +33,7 @@ monitoring loop, not an abstract add-on, and the integrated paper uses both halv
 |---|---|---|
 | role | decision and theory | measurement and application |
 | answers | the ceiling and its cost | what this chain actually measured |
-| release used | v0.1.0, doi:10.5281/zenodo.24080213 | concept doi:10.5281/zenodo.24128937 |
+| version | 0.1.1, doi:10.5281/zenodo.24136698 | concept doi:10.5281/zenodo.24128937 |
 | code relation | vendored into AM at `src/dbound/` | wrapped by `ammonitor.decision` |
 
 In code the dependency runs one way — AM vendors a pinned copy of this package and
