@@ -20,6 +20,27 @@ Neyman–Pearson lemma and the Cauchy–Schwarz inequality: the matched filter
 maximises the deflection, so no detector — including any trained one — can exceed
 it.
 
+## Twin of the monitoring system
+
+This package and [AM-MultiModal-Monitoring](https://github.com/Xbotsd/AM-MultiModal-Monitoring)
+are twins, built in the same effort and released under separate DOIs. The monitoring
+system measures what a sensing chain sees; this package was created to answer the
+question that measurement cannot: on the same chain, what could *any* detector see,
+and what would it cost to see more? The bound is the decision half of AM's
+monitoring loop, not an abstract add-on, and the integrated paper uses both halves.
+
+| | this package | AM-MultiModal-Monitoring |
+|---|---|---|
+| role | decision and theory | measurement and application |
+| answers | the ceiling and its cost | what this chain actually measured |
+| release used | v0.1.0, doi:10.5281/zenodo.24080213 | concept doi:10.5281/zenodo.24128937 |
+| code relation | vendored into AM at `src/dbound/` | wrapped by `ammonitor.decision` |
+
+In code the dependency runs one way — AM vendors a pinned copy of this package and
+does not edit it — but in provenance they are siblings: same author, same
+architecture, cross-cited. The mapping, module by module and result by result, is
+in AM's [docs/TWIN_LIBRARIES.md](https://github.com/Xbotsd/AM-MultiModal-Monitoring/blob/main/docs/TWIN_LIBRARIES.md).
+
 ## Start here
 
 | if you want to… | read |
@@ -126,7 +147,8 @@ See [`data/README.md`](data/README.md). Source: Zenodo
 
 ## Citing
 
-See `CITATION.cff`. If you use the imaging data, cite the Zenodo record.
+See `CITATION.cff`. If you use the integrated system, cite both this package and
+AM-MultiModal-Monitoring; if you use the imaging data, cite the Zenodo record.
 
 ## Licence
 

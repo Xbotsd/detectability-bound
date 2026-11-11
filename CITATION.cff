@@ -14,16 +14,26 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.24080213
     description: "version 0.1.0 (this specific release)"
-version: 0.1.0
-date-released: 2026-11-09
+version: 0.1.1
+date-released: 2026-11-11
 license: MIT
 abstract: >-
   An upper bound on the probability of detection of a volumetric flaw, derived
   from the Neyman-Pearson lemma and the Cauchy-Schwarz inequality, with the
   cubic and three-halves-power asymptotes in the ratio of flaw size to voxel
   size, an inverse design rule, and a measured correction for clutter inflation
-  on real X-ray computed tomography data.
+  on real X-ray computed tomography data. The twin decision layer of the
+  AM-MultiModal-Monitoring system.
 references:
+  - type: software
+    title: >-
+      AM-MultiModal-Monitoring: an integrated in-situ monitoring system for metal
+      additive manufacturing with a detectability bound
+    repository-code: "https://github.com/Xbotsd/AM-MultiModal-Monitoring"
+    doi: 10.5281/zenodo.24128937
+    notes: >-
+      The measurement and application half of the pair; this package is vendored
+      there at src/dbound and wrapped by ammonitor.decision.
   - type: dataset
     title: >-
       Tomographic image stacks for the study "Analysis of Porosity in AlSi10Mg

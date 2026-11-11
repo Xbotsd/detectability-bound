@@ -1,6 +1,6 @@
 {
   "title": "dbound: a closed-form detectability bound for volumetric flaw inspection",
-  "description": "<p>An upper bound on the probability of detection (POD) of a volumetric flaw, with the code, the result files and the manuscript that support it.</p><p>The bound follows from the Neyman-Pearson lemma and the Cauchy-Schwarz inequality: the matched filter maximises the deflection, so no detector - including any trained one - can exceed</p><p><code>d'(a) = (dI / sigma) * sqrt(E(a/L) * N)</code> and <code>POD(a) &lt;= Phi(d'(a) - z_{1-alpha})</code>,</p><p>where <code>a/L</code> is the ratio of flaw size to point-spread width and <code>E</code> is the squared norm of the blurred flaw image. The geometry enters through <code>E</code> alone, with two asymptotes: below the voxel size the deflection falls as the cube of the flaw size, above it as the three-halves power. A corollary prices resolution against repeat scanning: one halving of the voxel size is worth 64 repeat scans below the voxel size, and 8 above it.</p><p>The repository also measures what the white-noise assumption costs on real data. Using a public X-ray CT stack of laser powder-bed AlSi10Mg (212 slices, 37 um isotropic voxels), the noise a matched filter actually sees is 24 to 125 times the voxel noise, because the statistic integrates microstructure. The inflation is flat below the voxel size and rises as x^1.23 above it, so for flaws of equal contrast the effective size exponent falls from 3/2 to about 0.3.</p><p>Contents: the <code>dbound</code> Python package (bound, PSF, detectors, real-data estimators, experiments, CLI), 11 tests, the result files behind every table and figure, four publication figures, the manuscript, and the scripts that regenerate all of it. All empirical numbers come from the cited public dataset; the only synthetic content is the exact-truth check of Propositions 1-2, which is labelled as such and is never presented as data.</p>",
+  "description": "<p>An upper bound on the probability of detection (POD) of a volumetric flaw, with the code, the result files and the manuscript that support it.</p><p>This package is the twin of the AM-MultiModal-Monitoring system (concept doi:10.5281/zenodo.24128937), created to answer the question that monitoring data cannot: given the same sensing chain, what could any detector see, and what would it cost to see more? It is vendored into that system at a pinned commit; the module-by-module and result-by-result mapping is documented in AM's docs/TWIN_LIBRARIES.md.</p><p>The bound follows from the Neyman-Pearson lemma and the Cauchy-Schwarz inequality: the matched filter maximises the deflection, so no detector - including any trained one - can exceed</p><p><code>d'(a) = (dI / sigma) * sqrt(E(a/L) * N)</code> and <code>POD(a) &lt;= Phi(d'(a) - z_{1-alpha})</code>,</p><p>where <code>a/L</code> is the ratio of flaw size to point-spread width and <code>E</code> is the squared norm of the blurred flaw image. The geometry enters through <code>E</code> alone, with two asymptotes: below the voxel size the deflection falls as the cube of the flaw size, above it as the three-halves power. A corollary prices resolution against repeat scanning: one halving of the voxel size is worth 64 repeat scans below the voxel size, and 8 above it.</p><p>The repository also measures what the white-noise assumption costs on real data. Using a public X-ray CT stack of laser powder-bed AlSi10Mg (212 slices, 37 um isotropic voxels), the noise a matched filter actually sees is 24 to 125 times the voxel noise, because the statistic integrates microstructure. The inflation is flat below the voxel size and rises as x^1.23 above it, so for flaws of equal contrast the effective size exponent falls from 3/2 to about 0.3.</p><p>Contents: the <code>dbound</code> Python package (bound, PSF, detectors, real-data estimators, experiments, CLI), 11 tests, the result files behind every table and figure, four publication figures, the manuscript, and the scripts that regenerate all of it. All empirical numbers come from the cited public dataset; the only synthetic content is the exact-truth check of Propositions 1-2, which is labelled as such and is never presented as data.</p>",
   "creators": [
     {
       "name": "Xu, Yudong",
@@ -18,17 +18,26 @@
     "X-ray computed tomography",
     "additive manufacturing",
     "partial volume effect",
-    "inspection qualification"
+    "inspection qualification",
+    "in-situ monitoring",
+    "sensor fusion",
+    "defect detection"
   ],
   "license": {
     "id": "MIT"
   },
   "upload_type": "software",
-  "publication_date": "2026-11-09",
-  "version": "0.1.0",
+  "publication_date": "2026-11-11",
+  "version": "0.1.1",
   "language": "eng",
   "access_right": "open",
   "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24128937",
+      "relation": "isRelatedTo",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
     {
       "identifier": "10.5281/zenodo.17602110",
       "relation": "references",
