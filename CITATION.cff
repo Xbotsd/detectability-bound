@@ -1,4 +1,4 @@
-﻿cff-version: 1.2.0
+cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "dbound: a closed-form detectability bound for volumetric flaw inspection"
 type: software
